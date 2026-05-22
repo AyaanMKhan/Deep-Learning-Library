@@ -83,12 +83,12 @@ class Reshape(Function):
 def reshape(a, shape):
     return Reshape()(a, shape)
 
-class BroadcastTo(Function):
+class Broadcast_To(Function):
     def forward(self, a, shape):
         return np.broadcast_to(a, shape)
 
-def broadcastto(a, shape):
-    return BroadcastTo()(a, shape)
+def broadcast_to(a, shape):
+    return Broadcast_To()(a, shape)
 
 class Summation(Function):
     def forward(self, a):
